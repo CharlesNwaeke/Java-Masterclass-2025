@@ -2,12 +2,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("0 is " + (isPrime(0) ? "" : "NOT ") + "a prime number");
-        System.out.println("1 is " + (isPrime(1) ? "" : "NOT ") + "a prime number");
-        System.out.println("2 is " + (isPrime(2) ? "" : "NOT ") + "a prime number");
-        System.out.println("3 is " + (isPrime(3) ? "" : "NOT ") + "a prime number");
-        System.out.println("8 is " + (isPrime(8) ? "" : "NOT ") + "a prime number");
-        System.out.println("17 is " + (isPrime(17) ? "" : "NOT ") + "a prime number");
+//        System.out.println("0 is " + (isPrime(0) ? "" : "NOT ") + "a prime number");
+//        System.out.println("1 is " + (isPrime(1) ? "" : "NOT ") + "a prime number");
+//        System.out.println("2 is " + (isPrime(2) ? "" : "NOT ") + "a prime number");
+//        System.out.println("3 is " + (isPrime(3) ? "" : "NOT ") + "a prime number");
+//        System.out.println("8 is " + (isPrime(8) ? "" : "NOT ") + "a prime number");
+//        System.out.println("17 is " + (isPrime(17) ? "" : "NOT ") + "a prime number");
 
         int primeNumberCount = 0;
 
@@ -15,9 +15,13 @@ public class Main {
             if (isPrime(i)) {
                 System.out.println("Number " + i + " is a prime number");
                 primeNumberCount++;
+                if (primeNumberCount == 3) {
+                    System.out.println("Found 3 - Exiting from for loop");
+                    break;
+                }
             }
         }
-        System.out.println("Total number of prime numbers between 10 and 50 is " + primeNumberCount);
+        // System.out.println("Total number of prime numbers between 10 and 50 is " + primeNumberCount);
     }
 
     public static boolean isPrime(int wholeNumber) {
